@@ -19,6 +19,7 @@
   </head>
   <body>
     <h1 id="first">My First H1</h1>
+    <h1 class="second">My Second H1</h1>
     <p class="second">This is a paragraph.</p>
     <p class="second">This is another paragraph.</p>
 
@@ -35,12 +36,24 @@
     ></script>
 
     <script>
-      // getElementById(), getElementByClassName()
+      // getElementById()
       let myH1 = document.getElementById("first");
-      console.log(myH1);
+      //   console.log(myH1);
 
+      // getElementByClassName()
       let myP = document.getElementsByClassName("second");
-      console.log(myP);
+      //   console.log(myP);
+
+      // querySelector()
+      let secondH1 = document.querySelector("h1.second");
+      //   console.log(secondH1);
+      // 只會 return 第一個滿足 css selector 的 html elements
+
+      // querySelectorAll()
+      let seconds = document.querySelectorAll(".second");
+      //   let seconds = document.querySelectorAll(".second[1]")
+      //   也可以寫 .cssSelector[index num], but nodelist is not an array
+      console.log(seconds);
     </script>
   </body>
 </html>
