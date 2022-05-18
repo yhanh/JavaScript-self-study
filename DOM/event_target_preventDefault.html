@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Object Methods and Properties</title>
+  </head>
+  <body>
+    <h1>This is my H1</h1>
+
+    <hr />
+
+    <form action="">
+      <input type="text" />
+      <button type="submit">Submit the form</button>
+    </form>
+
+    <script>
+      // e.target
+      let h1 = document.querySelector("h1");
+      h1.addEventListener("click", (e) => {
+        console.log(e);
+        console.log(e.target);
+        console.log(e.target.innerText);
+      });
+
+      // e.preventDefault()
+      let button = document.querySelector("button");
+      button.addEventListener("click", (e) => {
+        e.preventDefault();
+      });
+    </script>
+  </body>
+</html>
