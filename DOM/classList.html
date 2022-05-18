@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>classList</title>
+
+    <style>
+        .gray{
+            background-color: gray;
+        }
+        .lightblue{
+            background-color: lightblue;
+        }
+        .bold{
+            font-weight: bolder;
+        }
+    </style>
+</head>
+
+<body>
+    <p class="lightblue bold">Lorem ipsum dolor sit amet</p> 
+    
+    <script>
+        // classList
+        // let myP = document.querySelector("p");
+        // console.log(myP.classList);
+
+        // classList's methods
+        // add()
+        // let myP = document.querySelector("p");
+        // myP.classList.add("lightblue");
+        // myP.classList.add("bold");
+        
+        // remove()
+        // let myP = document.querySelector("p");
+        // myP.classList.remove("lightblue");
+
+        // contains()
+        // ckeck out if there is certain class name in the target → return boolean
+        let myP = document.querySelector("p");
+        console.log(myP.classList.contains("gray"));
+    </script>
+</body>
+</html>
