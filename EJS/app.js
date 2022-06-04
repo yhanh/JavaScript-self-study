@@ -10,9 +10,15 @@ app.get("/", (req, res) => {
   res.render("index.ejs"); // 要被 res.render 的文件一定要再 views 資料夾中
 });
 
-app.get("/:name", (req, res) => {
-  let { name } = req.params;
-  res.render("person.ejs", { name });
+// app.get("/:name", (req, res) => {
+//   let { name } = req.params;
+//   res.render("person.ejs", { name });
+// });
+
+app.get("/resopnse", (req, res) => {
+  console.log(req.query);
+  let { fullname, age } = req.query;
+  res.render("respond.ejs", { fullname, age });
 });
 
 app.listen(3000, () => {
